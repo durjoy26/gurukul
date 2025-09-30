@@ -116,36 +116,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>গুরুকূল নীতি — মন নিয়ন্ত্রণ ও দৈনন্দিন জীবন</title>
   <style>
-    :root{--bg:#f7f9fc;--card:#ffffff;--muted:#6b7280;--accent:#0ea5a4}
-    *{box-sizing:border-box}
-    body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,'Noto Sans Bengali',Arial,sans-serif;background:var(--bg);color:#111;margin:0;padding:24px}
-    .container{max-width:920px;margin:0 auto}
-    header{display:flex;align-items:center;gap:16px;margin-bottom:20px}
-    .logo{width:56px;height:56px;display:flex;align-items:center;justify-content:center;border-radius:12px;background:linear-gradient(135deg,var(--accent),#60a5fa);color:white;font-weight:700}
-    h1{margin:0;font-size:1.5rem}
-    p.lead{margin:6px 0 18px;color:var(--muted)}
-    .card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(16,24,40,0.06);margin-bottom:14px}
-    h2{font-size:1.125rem;margin:0 0 8px}
-    ul{margin:8px 0 12px 20px}
-    ol{margin:8px 0 12px 20px}
-    li{margin:6px 0}
-    .sub{color:var(--muted);font-size:0.95rem}
-    .grid{display:grid;grid-template-columns:1fr;gap:12px}
-    @media(min-width:800px){.grid{grid-template-columns:1fr 1fr}}
-    .people-list{display:flex;flex-direction:column;gap:6px}
-    .small{font-size:0.9rem;color:var(--muted)}
-    footer{margin-top:18px;color:var(--muted);font-size:0.9rem}
-    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:#eef2ff;color:#4338ca;font-weight:600;font-size:0.85rem}
+    :root{--bg:#f7f9fc;--card:#ffffff;--muted:#6b7280;--accent:#0ea5a4;--font:'Noto Sans Bengali', sans-serif}
+    *{box-sizing:border-box; margin:0; padding:0;}
+    body{font-family:var(--font); background:var(--bg); color:#111; line-height:1.6;}
+    .container{width:100%; padding:12px; max-width:100%; margin:0 auto;}
+    header{display:flex; flex-direction:column; align-items:center; gap:12px; margin-bottom:20px; text-align:center;}
+    .logo{width:64px; height:64px; display:flex; align-items:center; justify-content:center; border-radius:50%; background:linear-gradient(135deg,var(--accent),#60a5fa); color:white; font-weight:700; font-size:1.5rem;}
+    h1{font-size:1.8rem; margin-bottom:6px;}
+    p.lead{color:var(--muted); font-size:1rem;}
+    .card{background:var(--card); border-radius:12px; padding:20px; margin-bottom:16px; width:100%; box-shadow:0 4px 12px rgba(0,0,0,0.08); transition: transform 0.3s;}
+    .card:hover{transform:translateY(-4px);}
+    h2{font-size:1.3rem; margin-bottom:10px; color:#0f172a;}
+    ul, ol{margin-left:20px; margin-bottom:12px;}
+    li{margin-bottom:6px;}
+    .sub{color:var(--muted); font-size:0.95rem;}
+    .grid{display:grid; grid-template-columns:1fr; gap:12px;}
+    @media(min-width:768px){.grid{grid-template-columns:1fr 1fr;}}
+    .people-list{display:flex; flex-direction:column; gap:6px; margin-top:10px;}
+    .small{font-size:0.9rem; color:var(--muted);}
+    .badge{display:inline-block; padding:6px 10px; border-radius:999px; background:#eef2ff; color:#4338ca; font-weight:600; font-size:0.85rem; margin-bottom:6px;}
+    footer{margin-top:20px; text-align:center; color:var(--muted); font-size:0.9rem;}
   </style>
 </head>
 <body>
   <div class="container">
     <header>
       <div class="logo">গ</div>
-      <div>
-        <h1>৫ টা বৈদিক নীতি — গুরুকূল রুটিন ও মন নিয়ন্ত্রণ</h1>
-        <p class="lead">গুরুকুলের ঐতিহ্যগত শৃঙ্খলা ও আচার-অনুষ্ঠান অনুযায়ী দৈনন্দিন জীবন ও মনকে নিয়ন্ত্রণ করার পাঁচটি মূলনীতি।</p>
-      </div>
+      <h1>৫ টা বৈদিক নীতি — গুরুকূল রুটিন ও মন নিয়ন্ত্রণ</h1>
+      <p class="lead">গুরুকুলের ঐতিহ্যগত শৃঙ্খলা ও আচার-অনুষ্ঠান অনুযায়ী দৈনন্দিন জীবন ও মনকে নিয়ন্ত্রণ করার পাঁচটি মূলনীতি।</p>
     </header>
 
     <section class="card">
@@ -192,7 +190,7 @@
       <p class="small">Divide your day in parts as per your work — দিনে সময় ভাগ করে প্রতিটি কাজের জন্য নির্দিষ্ট সময় নির্ধারণ করুন।</p>
       <div class="grid">
         <div>
-          <h3 style="margin:6px 0">উদাহরণসূচক রুটিন</h3>
+          <h3>উদাহরণসূচক রুটিন</h3>
           <ul>
             <li>সকাল: অধ্যয়ন / কঠিন কাজ</li>
             <li>দুপুর: বিশ্রাম ও হালকা কাজ</li>
@@ -201,7 +199,7 @@
           </ul>
         </div>
         <div>
-          <h3 style="margin:6px 0">টিপস</h3>
+          <h3>টিপস</h3>
           <ul>
             <li>একবেলা এক কাজে পুরো মনোযোগ দিন (Pomodoro-like)</li>
             <li>প্রয়োজনীয় না হলে মাল্টিটাস্কিং এড়িয়ে চলুন</li>
@@ -227,17 +225,14 @@
         <p class="small">এছাড়া: স্বামী বিবেকানন্দ, মা আনন্দময়ী, অনুকূল ঠাকুর — এদের বাণী অনুসরণ করা যেতে পারে।</p>
       </div>
     </section>
-    
+
+    <footer>
+      <p>এই পেজটি মোবাইল ও ডেস্কটপ উভয় ডিভাইসে সুন্দরভাবে দেখা যাবে।</p>
+    </footer>
   </div>
 </body>
 </html>
-    </div>
-    
-    <footer>
-      <p>Designed for easy printing and mobile viewing — adapt freely.</p>
-    </footer>
-  </div>
-
+</div>
   <script>
     // Copy page HTML to clipboard (for quick saving)
     document.getElementById('downloadBtn').addEventListener('click', function(e){
