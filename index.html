@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gurukul‑Inspired Daily Routine</title>
+  <meta name="description" content="A clean, responsive single-page HTML of a Gurukul-inspired daily routine that fits around university classes (8:00–17:00)." />
+  <style>
+    :root{
+      --bg:#f7fafc; --card:#ffffff; --muted:#6b7280; --accent:#0ea5a4; --glass: rgba(255,255,255,0.6);
+      --radius:12px; --maxw:900px;
+    }
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; background:linear-gradient(180deg,var(--bg),#eef2f7); color:#111827}
+    .container{max-width:var(--maxw); margin:34px auto; padding:20px}
+    header{display:flex;align-items:center;gap:16px;margin-bottom:18px}
+    .logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#7dd3fc);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:20px}
+    h1{margin:0;font-size:20px}
+    p.lead{margin:6px 0 0;color:var(--muted)}
+
+    .card{background:var(--card);border-radius:var(--radius);box-shadow:0 6px 20px rgba(2,6,23,0.06);padding:18px}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:18px}
+
+    @media (max-width:880px){.grid{grid-template-columns:1fr}}
+
+    table{width:100%;border-collapse:collapse;font-size:15px}
+    thead th{background:linear-gradient(90deg,var(--accent),#60a5fa);color:#fff;padding:12px;border-radius:8px 8px 0 0;text-align:left}
+    tbody tr{background:var(--glass);backdrop-filter:blur(2px)}
+    tbody td{padding:12px;border-bottom:1px solid rgba(0,0,0,0.06)}
+    tbody tr:last-child td{border-bottom:0}
+    .time{width:180px;font-weight:600;color:#0f172a}
+    .activity{color:#0b1220}
+
+    .controls{display:flex;flex-direction:column;gap:10px}
+    .box{padding:14px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.9),#fff);box-shadow:0 4px 12px rgba(2,6,23,0.04)}
+    .btn{display:inline-block;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600;border:0;cursor:pointer}
+    .btn-primary{background:var(--accent);color:#042024}
+    .btn-outline{background:transparent;border:1px solid #e6eef0;color:var(--muted)}
+
+    .small{font-size:13px;color:var(--muted)}
+    footer{margin-top:16px;font-size:13px;color:var(--muted);text-align:center}
+
+    /* print styles */
+    @media print{
+      body{background:white}
+      header, .controls, footer{display:none}
+      .card{box-shadow:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">G</div>
+      <div>
+        <h1>Gurukul‑Inspired Daily Routine</h1>
+        <p class="lead">A practical routine that blends Gurukul principles with your university timetable (8:00 AM – 5:00 PM).</p>
+      </div>
+    </header>
+
+    <div class="grid">
+      <main class="card">
+        <h2 style="margin-top:0">Daily Schedule</h2>
+        <p class="small">Use this as a template — adapt times and activities to your personal needs.</p>
+
+        <table aria-label="Gurukul inspired routine">
+          <thead>
+            <tr><th>Time</th><th>Activity</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="time">4:30 AM – 5:30 AM</td><td class="activity">Wake up, bath, meditation / prayer</td></tr>
+            <tr><td class="time">5:30 AM – 7:00 AM</td><td class="activity">Yoga / exercise, quick revision of previous lessons</td></tr>
+            <tr><td class="time">7:00 AM – 7:45 AM</td><td class="activity">Breakfast and prepare for classes</td></tr>
+            <tr><td class="time">8:00 AM – 5:00 PM</td><td class="activity">University classes (short breathing breaks between lectures)</td></tr>
+            <tr><td class="time">5:00 PM – 6:00 PM</td><td class="activity">Rest, walking or physical activity</td></tr>
+            <tr><td class="time">6:00 PM – 7:00 PM</td><td class="activity">Evening meditation / prayer, write short notes</td></tr>
+            <tr><td class="time">7:00 PM – 9:00 PM</td><td class="activity">Study, research or content creation (YouTube work)</td></tr>
+            <tr><td class="time">9:00 PM – 9:30 PM</td><td class="activity">Dinner, time with family or friends</td></tr>
+            <tr><td class="time">9:30 PM – 10:00 PM</td><td class="activity">Light revision and plan for the next day</td></tr>
+            <tr><td class="time">10:00 PM – 4:30 AM</td><td class="activity">Deep sleep</td></tr>
+          </tbody>
+        </table>
+
+        <section style="margin-top:18px">
+          <h3 style="margin:0 0 8px 0">Tips to follow the routine</h3>
+          <ul class="small">
+            <li>Keep phones away during meditation and revision blocks to reduce distraction.</li>
+            <li>Use short 2–5 minute breathing breaks between long study sessions at university.</li>
+            <li>Adjust sleep time if your classes or commute require it — maintain 6–8 hours of high quality sleep.</li>
+          </ul>
+        </section>
+      </main>
+
+      <aside class="controls">
+        <div class="box">
+          <strong>Actions</strong>
+          <div style="margin-top:10px;display:flex;flex-direction:column;gap:8px">
+            <button class="btn btn-primary" onclick="window.print()">Print routine</button>
+            <a class="btn btn-outline" href="#" id="downloadBtn">Copy HTML</a>
+          </div>
+          <p class="small" style="margin-top:10px">You can print this page or copy the HTML (button) to save locally.</p>
+        </div>
+
+        <div class="box">
+          <strong>Personalize</strong>
+          <p class="small" style="margin:8px 0 0">If you want, change time blocks or swap the evening study slot for extra rest on heavy class days.</p>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      <p>Designed for easy printing and mobile viewing — adapt freely.</p>
+    </footer>
+  </div>
+
+  <script>
+    // Copy page HTML to clipboard (for quick saving)
+    document.getElementById('downloadBtn').addEventListener('click', function(e){
+      e.preventDefault();
+      const html = '<!doctype html>' + document.documentElement.outerHTML;
+      if(navigator.clipboard && window.isSecureContext){
+        navigator.clipboard.writeText(html).then(()=>{
+          alert('Page HTML copied to clipboard. Paste into a .html file and save.');
+        });
+      } else {
+        // fallback: create a temporary textarea
+        const ta = document.createElement('textarea'); ta.value = html; document.body.appendChild(ta); ta.select();
+        try{document.execCommand('copy'); alert('Page HTML copied to clipboard. Paste into a .html file and save.');}catch(err){alert('Copy failed — please select and copy the page HTML manually.');}
+        ta.remove();
+      }
+    });
+  </script>
+</body>
+</html>
